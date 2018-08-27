@@ -1,0 +1,21 @@
+import empleados.*
+describe "empleados"{
+  test "baigorria arranca con deuda en 0" {
+ 
+	assert.equals(0,baigorria.totalDeudas())
+
+  }
+  
+  test "baigorria arranca con dinero en 0"
+{
+	assert.equals(0,baigorria.totalDeudas())
+}
+
+ test "baigorria cobra 15000 de sueldo"{
+ 	assert.equals(15000,baigorria.sueldo())
+ }
+
+
+
+
+}
