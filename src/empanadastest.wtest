@@ -8,14 +8,17 @@ describe "empleados"{
   
   test "baigorria arranca con dinero en 0"
 {
-	assert.equals(0,baigorria.totalDeudas())
+	assert.equals(0,baigorria.totalDinero())
 }
 
  test "baigorria cobra 15000 de sueldo"{
  	assert.equals(15000,baigorria.sueldo())
  }
 
-
-
+ test "baigorria gasta 4000"{
+ 	baigorria.gastar(4000)
+ 	assert.equals(4000,baigorria.totalDeudas())
+ 	assert.equals(0,baigorria.totalDinero())
+ }
 
 }
