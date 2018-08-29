@@ -15,10 +15,23 @@ describe "empleados"{
  	assert.equals(15000,baigorria.sueldo())
  }
 
- test "baigorria gasta 4000"{
+ test "finanzas de baigorria"{
  	baigorria.gastar(4000)
  	assert.equals(4000,baigorria.totalDeudas())
  	assert.equals(0,baigorria.totalDinero())
- }
+ 	baigorria.gastar(8000)
+  	assert.equals(12000,baigorria.totalDeudas())
+  	assert.equals(0,baigorria.totalDinero())
+ 	baigorria.cobrarSueldo()
+ 	assert.equals(0,baigorria.totalDeudas())
+ 	assert.equals(3000,baigorria.totalDinero())
+ 	baigorria.gastar(25000)
+ 	assert.equals(22000,baigorria.totalDeudas())
+ 	assert.equals(0,baigorria.totalDinero())	
+ 	baigorria.cobrarSueldo()
+ 	assert.equals(7000,baigorria.totalDeudas())
+ 	assert.equals(0,baigorria.totalDinero())
 
+ }
+ 
 }
